@@ -22,7 +22,7 @@ export default function CheckoutPage() {
     try {
       await addDoc(collection(db, 'orders'), {
         userId:     user.uid,
-        items:      items.map((i) => ({ name: i.name, quantity: i.quantity, priceNum: i.priceNum })),
+        items: items.map((i) => ({ name: i.name, quantity: i.qty, priceNum: i.priceNum })),
         totalPrice,
         address,
         status:    'pending',
