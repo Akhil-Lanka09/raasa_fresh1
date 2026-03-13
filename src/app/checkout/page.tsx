@@ -59,11 +59,11 @@ export default function CheckoutPage() {
               <div className={styles.fields}>
                 <div className="form-group">
                   <label>Full Name</label>
-                  <input value={`${profile?.firstName ?? ''} ${profile?.lastName ?? ''}`} disabled style={{ background: '#f9fafb' }} />
+<input value={`${user?.firstName ?? ''} ${user?.lastName ?? ''}`} disabled style={{ background: '#f9fafb' }} />
                 </div>
                 <div className="form-group">
                   <label>Phone</label>
-                  <input value={profile?.phone ?? ''} disabled style={{ background: '#f9fafb' }} />
+                  <input value={user?.phone ?? ''} disabled style={{ background: '#f9fafb' }} />
                 </div>
                 <div className="form-group">
                   <label>Delivery Address *</label>
