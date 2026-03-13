@@ -7,11 +7,11 @@ import type { FruitBox } from '@/data/fruitBoxes';
 import styles from './fruit.module.css';
 
 export default function FruitBoxGrid({ boxes }: { boxes: FruitBox[] }) {
-  const { addItem } = useCart();
+  const { addToCart } = useCart();
   const [added, setAdded] = useState<string | null>(null);
 
   function handleAdd(b: FruitBox) {
-    addItem({ id: b.id, name: b.name, priceNum: b.priceNum, priceDisplay: b.priceDisplay, imageUrl: b.imageUrl });
+    addToCart({ id: b.id, name: b.name, priceNum: b.priceNum, priceDisplay: b.priceDisplay, imageUrl: b.imageUrl });
     setAdded(b.id);
     setTimeout(() => setAdded(null), 1200);
   }
