@@ -10,7 +10,7 @@ import styles from './checkout.module.css';
 
 export default function CheckoutPage() {
   const { cart: items, totalPrice, clearCart: clear } = useCart();
-  const { user, profile } = useAuth();
+  const { user } = useAuth();
   const router = useRouter();
   const [placing, setPlacing] = useState(false);
   const [address, setAddress] = useState(profile?.address ?? '');
