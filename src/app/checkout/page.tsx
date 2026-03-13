@@ -81,8 +81,8 @@ export default function CheckoutPage() {
             <p className={styles.sectionTitle}>Order Summary</p>
             {items.map((i) => (
               <div key={i.id} className={styles.summaryRow}>
-                <span>{i.name} × {i.quantity}</span>
-                <span>₹{i.priceNum * i.quantity}</span>
+                <span>{i.name} × {i.qty}</span>
+                <span>₹{i.priceNum * i.qty}</span>
               </div>
             ))}
             <hr style={{ margin: '.75rem 0', borderColor: 'var(--border)' }} />
