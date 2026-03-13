@@ -9,15 +9,14 @@ export interface FruitItem {
 export interface FruitBox {
   id: string;
   name: string;
-  eyebrow: string;
-  sub: string;
-  price: string;
+  description: string;
   priceNum: number;
-  headCls: string;
-  footCls: string;
-  badgeCls: string;
-  badgeLabel: string;
-  items: FruitItem[];
+  priceDisplay: string;
+  imageUrl: string;
+  items: string[];
+  weightKg: number;
+  tier?: string;      // The ? makes it optional so it won't crash if a box doesn't have a tier
+  serves?: string;    // Optional, based on your grid code
 }
 
 export const fruitBoxes: FruitBox[] = [
