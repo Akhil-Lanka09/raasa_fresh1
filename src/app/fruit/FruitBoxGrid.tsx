@@ -11,7 +11,7 @@ export default function FruitBoxGrid({ boxes }: { boxes: FruitBox[] }) {
   const [added, setAdded] = useState<string | null>(null);
 
   function handleAdd(b: FruitBox) {
-    addToCart({ id: b.id, name: b.name, priceNum: b.priceNum, priceDisplay: b.priceDisplay, imageUrl: b.imageUrl });
+    addToCart({ id: b.id, name: b.name, priceNum: b.priceNum, priceDisplay: `₹${b.priceNum}` });
     setAdded(b.id);
     setTimeout(() => setAdded(null), 1200);
   }
