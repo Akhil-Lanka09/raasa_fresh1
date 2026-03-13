@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+<defs>
+  <linearGradient id="fbg" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0%" stop-color="#1a0505"/>
+    <stop offset="40%" stop-color="#2a0808"/>
+    <stop offset="100%" stop-color="#3d1005"/>
+  </linearGradient>
+  <radialGradient id="fspot1" cx="40%" cy="45%" r="45%">
+    <stop offset="0%" stop-color="#8b2a05" stop-opacity="0.5"/>
+    <stop offset="70%" stop-color="#5a1a05" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#1a0505" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="fspot2" cx="80%" cy="30%" r="30%">
+    <stop offset="0%" stop-color="#a03008" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#1a0505" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="fglow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="fsoft"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="fblur"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+
+<rect width="1200" height="500" fill="url(#fbg)"/>
+<rect width="1200" height="500" fill="url(#fspot1)"/>
+<rect width="1200" height="500" fill="url(#fspot2)"/>
+
+<!-- Half mango — left, big, golden -->
+<g transform="translate(250, 270)" filter="url(#fglow)">
+  <!-- Shadow -->
+  <ellipse cx="0" cy="90" rx="75" ry="18" fill="#100202" opacity="0.7"/>
+  <!-- Outer skin -->
+  <path d="M -70 0 Q -72 -80 0 -100 Q 72 -80 70 0 Q 50 80 0 90 Q -50 80 -70 0 Z" fill="#c8600a"/>
+  <!-- Inner flesh exposed (cut half) -->
+  <path d="M -68 0 Q -70 -78 0 -98 Q 70 -78 68 0 Z" fill="#f0b820"/>
+  <!-- Flesh gradient - richer toward center -->
+  <ellipse cx="0" cy="-45" rx="52" ry="48" fill="#f5c830" opacity="0.7"/>
+  <ellipse cx="0" cy="-42" rx="35" ry="32" fill="#f5d840" opacity="0.5"/>
+  <!-- Seed -->
+  <ellipse cx="0" cy="-40" rx="16" ry="22" fill="#c8900a" opacity="0.6"/>
+  <ellipse cx="0" cy="-40" rx="12" ry="18" fill="#b07808"/>
+  <!-- Highlight on flesh -->
+  <ellipse cx="-20" cy="-65" rx="15" ry="10" fill="#fff5a0" opacity="0.35"/>
+  <!-- Skin texture lines -->
+  <path d="M -68 0 Q -40 -60 0 -98" stroke="#a04808" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <path d="M 68 0 Q 40 -60 0 -98" stroke="#a04808" stroke-width="0.8" fill="none" opacity="0.4"/>
+</g>
+
+<!-- Pomegranate half — cut open, jewel red -->
+<g transform="translate(560, 260)" filter="url(#fglow)">
+  <!-- Shadow -->
+  <ellipse cx="0" cy="78" rx="70" ry="16" fill="#100202" opacity="0.65"/>
+  <!-- Outer rind -->
+  <circle cx="0" cy="0" r="72" fill="#9a1a10"/>
+  <!-- Inner white pith ring -->
+  <circle cx="0" cy="0" r="68" fill="#f5e8d8"/>
+  <!-- Arils (seeds) arrangement - tight jewel-like clusters -->
+  <circle cx="0" cy="-30" r="52" fill="#c82020"/>
+  <!-- Individual aril cells (packed seeds) -->
+  <g fill="#e03030" opacity="0.85">
+    <!-- Row 1 top -->
+    <ellipse cx="-30" cy="-55" rx="9" ry="11"/><ellipse cx="-10" cy="-60" rx="9" ry="11"/>
+    <ellipse cx="10" cy="-60" rx="9" ry="11"/><ellipse cx="30" cy="-55" rx="9" ry="11"/>
+    <!-- Row 2 -->
+    <ellipse cx="-42" cy="-37" rx="9" ry="11"/><ellipse cx="-22" cy="-42" rx="9" ry="11"/>
+    <ellipse cx="-2" cy="-43" rx="9" ry="11"/><ellipse cx="18" cy="-42" rx="9" ry="11"/>
+    <ellipse cx="38" cy="-37" rx="9" ry="11"/>
+    <!-- Row 3 -->
+    <ellipse cx="-48" cy="-17" rx="9" ry="11"/><ellipse cx="-28" cy="-22" rx="9" ry="11"/>
+    <ellipse cx="-8" cy="-23" rx="9" ry="11"/><ellipse cx="12" cy="-23" rx="9" ry="11"/>
+    <ellipse cx="32" cy="-22" rx="9" ry="11"/><ellipse cx="48" cy="-17" rx="9" ry="11"/>
+    <!-- Row 4 center -->
+    <ellipse cx="-40" cy="3" rx="9" ry="11"/><ellipse cx="-20" cy="-2" rx="9" ry="11"/>
+    <ellipse cx="0" cy="-3" rx="9" ry="11"/><ellipse cx="20" cy="-2" rx="9" ry="11"/>
+    <ellipse cx="40" cy="3" rx="9" ry="11"/>
+  </g>
+  <!-- Aril highlights -->
+  <g fill="#ff6060" opacity="0.45">
+    <ellipse cx="-30" cy="-59" rx="4" ry="3"/><ellipse cx="-10" cy="-64" rx="4" ry="3"/>
+    <ellipse cx="10" cy="-64" rx="4" ry="3"/><ellipse cx="30" cy="-59" rx="4" ry="3"/>
+    <ellipse cx="-22" cy="-46" rx="4" ry="3"/><ellipse cx="-2" cy="-47" rx="4" ry="3"/>
+    <ellipse cx="18" cy="-46" rx="4" ry="3"/>
+  </g>
+  <!-- Crown on top -->
+  <g fill="#7a1208">
+    <path d="M -15 -68 Q -18 -82 -12 -84 Q -8 -78 -15 -68 Z"/>
+    <path d="M -5 -70 Q -8 -86 -2 -88 Q 2 -80 -5 -70 Z"/>
+    <path d="M 5 -70 Q 8 -86 2 -88 Q -2 -80 5 -70 Z"/>
+    <path d="M 15 -68 Q 18 -82 12 -84 Q 8 -78 15 -68 Z"/>
+  </g>
+  <!-- Pith border -->
+  <circle cx="0" cy="-18" r="62" fill="none" stroke="#f0e0c8" stroke-width="6" opacity="0.4"/>
+</g>
+
+<!-- Orange / mossambi cross section — right side -->
+<g transform="translate(870, 245)">
+  <!-- Shadow -->
+  <ellipse cx="0" cy="78" rx="68" ry="16" fill="#100202" opacity="0.6"/>
+  <!-- Outer peel -->
+  <circle cx="0" cy="0" r="70" fill="#d46a05"/>
+  <!-- White pith ring -->
+  <circle cx="0" cy="0" r="62" fill="#f5e8c0"/>
+  <!-- Center core -->
+  <circle cx="0" cy="0" r="10" fill="#e8a020"/>
+  <!-- Segments -->
+  <g fill="#f0a820" stroke="#e09010" stroke-width="0.8">
+    <path d="M 0 0 L 0 -60 Q 20 -58 28 -52 Z"/>
+    <path d="M 0 0 L 28 -52 Q 50 -36 52 -12 Z"/>
+    <path d="M 0 0 L 52 -12 Q 58 14 46 36 Z"/>
+    <path d="M 0 0 L 46 36 Q 26 56 0 60 Z"/>
+    <path d="M 0 0 L 0 60 Q -26 56 -46 36 Z"/>
+    <path d="M 0 0 L -46 36 Q -58 14 -52 -12 Z"/>
+    <path d="M 0 0 L -52 -12 Q -50 -36 -28 -52 Z"/>
+    <path d="M 0 0 L -28 -52 Q -20 -58 0 -60 Z"/>
+  </g>
+  <!-- Segment highlights -->
+  <g fill="#ffcc50" opacity="0.25">
+    <path d="M 0 -8 L 0 -55 Q 18 -52 25 -46 Z"/>
+    <path d="M 0 -8 L 25 -46 Q 45 -32 47 -10 Z"/>
+    <path d="M 0 -8 L 47 -10 Q 52 12 42 32 Z"/>
+  </g>
+  <!-- Center highlight -->
+  <circle cx="-4" cy="-4" r="6" fill="#fff5a0" opacity="0.5"/>
+  <!-- Outer peel dots -->
+  <g fill="#c05508" opacity="0.3">
+    <circle cx="0" cy="-66" r="2.5"/><circle cx="40" cy="-52" r="2"/><circle cx="62" cy="-16" r="2.5"/>
+    <circle cx="58" cy="24" r="2"/><circle cx="36" cy="56" r="2.5"/><circle cx="-36" cy="56" r="2"/>
+    <circle cx="-62" cy="12" r="2.5"/><circle cx="-58" cy="-28" r="2"/>
+  </g>
+</g>
+
+<!-- Banana — diagonal, far right foreground -->
+<g transform="translate(1080, 320) rotate(-25)">
+  <ellipse cx="0" cy="40" rx="18" ry="6" fill="#100202" opacity="0.5"/>
+  <path d="M -16 -80 Q -18 0 -10 50 Q 0 58 10 50 Q 18 0 16 -80 Q 8 -90 0 -92 Q -8 -90 -16 -80 Z" fill="#c8a005"/>
+  <path d="M -14 -78 Q -16 0 -8 48 Q 0 55 8 -78 Z" fill="#e8c020"/>
+  <!-- Length highlight -->
+  <ellipse cx="-6" cy="-20" rx="5" ry="45" fill="#f5d840" opacity="0.3"/>
+  <!-- Tip and end -->
+  <ellipse cx="0" cy="-90" rx="6" ry="5" fill="#8b7005"/>
+  <ellipse cx="0" cy="53" rx="7" ry="5" fill="#8b7005"/>
+</g>
+
+<!-- Strawberry — far left, small, red jewel -->
+<g transform="translate(120, 300)" filter="url(#fglow)">
+  <ellipse cx="0" cy="48" rx="22" ry="7" fill="#100202" opacity="0.55"/>
+  <path d="M -20 0 Q -22 -20 0 -45 Q 22 -20 20 0 Q 18 28 0 45 Q -18 28 -20 0 Z" fill="#c0180a"/>
+  <path d="M -18 -2 Q -20 -18 0 -42 Q 20 -18 18 -2 Q 14 25 0 42 Z" fill="#e02020"/>
+  <!-- Seeds -->
+  <g fill="#f5c080" opacity="0.7" font-size="0">
+    <ellipse cx="-10" cy="-20" rx="2" ry="3" transform="rotate(-10,-10,-20)"/>
+    <ellipse cx="8" cy="-22" rx="2" ry="3" transform="rotate(5,8,-22)"/>
+    <ellipse cx="-14" cy="0" rx="2" ry="3" transform="rotate(-15,-14,0)"/>
+    <ellipse cx="6" cy="-5" rx="2" ry="3" transform="rotate(8,6,-5)"/>
+    <ellipse cx="14" cy="5" rx="2" ry="3" transform="rotate(15,14,5)"/>
+    <ellipse cx="-8" cy="15" rx="2" ry="3" transform="rotate(-8,-8,15)"/>
+    <ellipse cx="8" cy="20" rx="2" ry="3" transform="rotate(10,8,20)"/>
+    <ellipse cx="-4" cy="32" rx="2" ry="2"/>
+  </g>
+  <!-- Highlight -->
+  <ellipse cx="-8" cy="-18" rx="7" ry="10" fill="#ff8080" opacity="0.35"/>
+  <!-- Leaves/calyx -->
+  <g fill="#2a7820">
+    <path d="M 0 -42 Q -15 -60 -12 -55 Q -5 -44 0 -42 Z"/>
+    <path d="M 0 -42 Q 15 -60 12 -55 Q 5 -44 0 -42 Z"/>
+    <path d="M 0 -42 Q -22 -52 -18 -46 Q -8 -42 0 -42 Z"/>
+    <path d="M 0 -42 Q 22 -52 18 -46 Q 8 -42 0 -42 Z"/>
+    <path d="M 0 -42 Q 0 -65 2 -60 Q 4 -50 0 -42 Z"/>
+  </g>
+</g>
+
+<!-- Grapes cluster — mid background -->
+<g transform="translate(700, 180)" opacity="0.75">
+  <g fill="#4a0878">
+    <circle cx="0" cy="0" r="18" filter="url(#fsoft)"/>
+    <circle cx="30" cy="5" r="18" filter="url(#fsoft)"/>
+    <circle cx="-30" cy="5" r="18" filter="url(#fsoft)"/>
+    <circle cx="15" cy="28" r="18" filter="url(#fsoft)"/>
+    <circle cx="-15" cy="28" r="18" filter="url(#fsoft)"/>
+    <circle cx="0" cy="50" r="18" filter="url(#fsoft)"/>
+    <circle cx="30" cy="50" r="18" filter="url(#fsoft)"/>
+    <circle cx="-30" cy="50" r="18" filter="url(#fsoft)"/>
+    <circle cx="15" cy="72" r="18" filter="url(#fsoft)"/>
+    <circle cx="-15" cy="72" r="18" filter="url(#fsoft)"/>
+    <circle cx="0" cy="90" r="18" filter="url(#fsoft)"/>
+  </g>
+  <g fill="#7020c0">
+    <circle cx="0" cy="0" r="16"/><circle cx="30" cy="5" r="16"/><circle cx="-30" cy="5" r="16"/>
+    <circle cx="15" cy="28" r="16"/><circle cx="-15" cy="28" r="16"/>
+    <circle cx="0" cy="50" r="16"/><circle cx="30" cy="50" r="16"/><circle cx="-30" cy="50" r="16"/>
+    <circle cx="15" cy="72" r="16"/><circle cx="-15" cy="72" r="16"/>
+    <circle cx="0" cy="90" r="16"/>
+  </g>
+  <!-- Highlights on grapes -->
+  <g fill="#b060ff" opacity="0.4">
+    <circle cx="-5" cy="-5" r="5"/><circle cx="25" cy="0" r="5"/><circle cx="-35" cy="0" r="5"/>
+    <circle cx="10" cy="23" r="5"/><circle cx="-20" cy="23" r="5"/>
+    <circle cx="-5" cy="45" r="5"/><circle cx="25" cy="45" r="5"/>
+    <circle cx="10" cy="67" r="5"/><circle cx="-5" cy="85" r="5"/>
+  </g>
+  <!-- Stem/vine -->
+  <path d="M 0 -20 Q 5 -45 0 -60" stroke="#4a2805" stroke-width="3" fill="none"/>
+  <path d="M 0 -50 Q -20 -58 -30 -50" stroke="#4a2805" stroke-width="2" fill="none"/>
+  <path d="M 0 -50 Q 20 -58 30 -50" stroke="#4a2805" stroke-width="2" fill="none"/>
+  <!-- Leaf -->
+  <path d="M -30 -50 Q -50 -70 -35 -75 Q -20 -65 -30 -50 Z" fill="#2a6a18" opacity="0.7"/>
+</g>
+
+<!-- Warm surface/table at bottom -->
+<path d="M 0 445 Q 400 430 800 445 Q 1000 455 1200 438 L 1200 500 L 0 500 Z" fill="#200808" opacity="0.7"/>
+
+<!-- Warm light bloom top-right -->
+<ellipse cx="1000" cy="80" rx="300" ry="200" fill="#8b2a05" opacity="0.12" filter="url(#fblur)"/>
+</svg>

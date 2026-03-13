@@ -1,0 +1,355 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+<defs>
+  <!-- Warm porch ambient -->
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1a0e05"/>
+    <stop offset="45%" stop-color="#2a1a08"/>
+    <stop offset="100%" stop-color="#1a0e05"/>
+  </linearGradient>
+  <!-- Porch light cone from above -->
+  <radialGradient id="plight" cx="62%" cy="0%" r="70%">
+    <stop offset="0%" stop-color="#f5c840" stop-opacity="0.55"/>
+    <stop offset="30%" stop-color="#e8980a" stop-opacity="0.3"/>
+    <stop offset="65%" stop-color="#c87010" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#1a0e05" stop-opacity="0"/>
+  </radialGradient>
+  <!-- Floor gradient -->
+  <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2a1808"/>
+    <stop offset="100%" stop-color="#0d0803"/>
+  </linearGradient>
+  <!-- Door wood gradient -->
+  <linearGradient id="door" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#3d1f05"/>
+    <stop offset="30%" stop-color="#5a2e08"/>
+    <stop offset="70%" stop-color="#4a2506"/>
+    <stop offset="100%" stop-color="#3a1c04"/>
+  </linearGradient>
+  <!-- Door panel inset -->
+  <linearGradient id="dpanel" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6a3810"/>
+    <stop offset="100%" stop-color="#3a1e05"/>
+  </linearGradient>
+  <!-- Basket weave -->
+  <linearGradient id="basket" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#c89040"/>
+    <stop offset="50%" stop-color="#a87030"/>
+    <stop offset="100%" stop-color="#7a5020"/>
+  </linearGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="wallblur"><feGaussianBlur stdDeviation="1.5"/></filter>
+</defs>
+
+<!-- Wall background -->
+<rect width="1200" height="500" fill="url(#wall)"/>
+
+<!-- Subtle brick/plaster texture lines on wall -->
+<g stroke="#251305" stroke-width="0.5" opacity="0.35" fill="none">
+  <!-- Horizontal mortar lines -->
+  <line x1="0" y1="80" x2="1200" y2="80"/><line x1="0" y1="140" x2="1200" y2="140"/>
+  <line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="260" x2="1200" y2="260"/>
+  <line x1="0" y1="320" x2="1200" y2="320"/><line x1="0" y1="380" x2="1200" y2="380"/>
+  <!-- Offset vertical joints -->
+  <line x1="120" y1="80" x2="120" y2="140"/><line x1="300" y1="80" x2="300" y2="140"/>
+  <line x1="480" y1="80" x2="480" y2="140"/><line x1="660" y1="80" x2="660" y2="140"/>
+  <line x1="840" y1="80" x2="840" y2="140"/><line x1="1020" y1="80" x2="1020" y2="140"/>
+  <line x1="210" y1="140" x2="210" y2="200"/><line x1="390" y1="140" x2="390" y2="200"/>
+  <line x1="570" y1="140" x2="570" y2="200"/><line x1="750" y1="140" x2="750" y2="200"/>
+  <line x1="930" y1="140" x2="930" y2="200"/><line x1="1110" y1="140" x2="1110" y2="200"/>
+  <line x1="120" y1="200" x2="120" y2="260"/><line x1="300" y1="200" x2="300" y2="260"/>
+  <line x1="480" y1="200" x2="480" y2="260"/><line x1="660" y1="200" x2="660" y2="260"/>
+  <line x1="840" y1="200" x2="840" y2="260"/><line x1="1020" y1="200" x2="1020" y2="260"/>
+  <line x1="210" y1="260" x2="210" y2="320"/><line x1="390" y1="260" x2="390" y2="320"/>
+  <line x1="570" y1="260" x2="570" y2="320"/><line x1="750" y1="260" x2="750" y2="320"/>
+  <line x1="930" y1="260" x2="930" y2="320"/><line x1="1110" y1="260" x2="1110" y2="320"/>
+  <line x1="120" y1="320" x2="120" y2="380"/><line x1="300" y1="320" x2="300" y2="380"/>
+  <line x1="480" y1="320" x2="480" y2="380"/><line x1="660" y1="320" x2="660" y2="380"/>
+  <line x1="840" y1="320" x2="840" y2="380"/><line x1="1020" y1="320" x2="1020" y2="380"/>
+</g>
+
+<!-- Porch light glow from top right -->
+<rect width="1200" height="500" fill="url(#plight)"/>
+
+<!-- Porch light fixture -->
+<g transform="translate(748, 0)">
+  <!-- Mounting bracket -->
+  <rect x="-6" y="0" width="12" height="28" rx="3" fill="#8a6020"/>
+  <!-- Light housing body -->
+  <path d="M -28 28 L 28 28 L 22 80 L -22 80 Z" fill="#c89030"/>
+  <path d="M -26 30 L 26 30 L 20 78 L -20 78 Z" fill="#e0a040"/>
+  <!-- Glass pane (glowing) -->
+  <path d="M -22 32 L 22 32 L 17 76 L -17 76 Z" fill="#fff8c0" opacity="0.9" filter="url(#glow)"/>
+  <path d="M -20 34 L 20 34 L 15 74 L -15 74 Z" fill="#fffde0"/>
+  <!-- Bottom cap -->
+  <ellipse cx="0" cy="80" rx="24" ry="7" fill="#b07820"/>
+  <!-- Top decorative cap -->
+  <ellipse cx="0" cy="28" rx="30" ry="8" fill="#a06818"/>
+  <!-- Warm light spill downward -->
+  <path d="M -22 80 L -90 500 L 90 500 L 22 80 Z" fill="#f5c840" opacity="0.07"/>
+</g>
+
+<!-- Door frame / surround -->
+<rect x="310" y="0" width="420" height="500" fill="#2a1505" rx="2"/>
+
+<!-- Door frame moulding -->
+<rect x="318" y="5" width="404" height="492" fill="#3a1e08" rx="1"/>
+
+<!-- Main door panels -->
+<rect x="330" y="10" width="390" height="490" fill="url(#door)"/>
+
+<!-- Door wood grain lines -->
+<g stroke="#3a1a05" stroke-width="0.7" opacity="0.4">
+  <line x1="340" y1="10" x2="340" y2="500"/>
+  <line x1="360" y1="10" x2="360" y2="500"/>
+  <line x1="380" y1="10" x2="380" y2="500"/>
+  <line x1="400" y1="10" x2="400" y2="500"/>
+  <line x1="420" y1="10" x2="420" y2="500"/>
+  <line x1="440" y1="10" x2="440" y2="500"/>
+  <line x1="460" y1="10" x2="460" y2="500"/>
+  <line x1="480" y1="10" x2="480" y2="500"/>
+  <line x1="500" y1="10" x2="500" y2="500"/>
+  <line x1="520" y1="10" x2="520" y2="500"/>
+  <line x1="540" y1="10" x2="540" y2="500"/>
+  <line x1="560" y1="10" x2="560" y2="500"/>
+  <line x1="580" y1="10" x2="580" y2="500"/>
+  <line x1="600" y1="10" x2="600" y2="500"/>
+  <line x1="620" y1="10" x2="620" y2="500"/>
+  <line x1="640" y1="10" x2="640" y2="500"/>
+  <line x1="660" y1="10" x2="660" y2="500"/>
+  <line x1="680" y1="10" x2="680" y2="500"/>
+  <line x1="700" y1="10" x2="700" y2="500"/>
+</g>
+
+<!-- Upper door panels (2 side-by-side) -->
+<rect x="348" y="30" width="168" height="180" rx="4" fill="url(#dpanel)" stroke="#6a3810" stroke-width="1.5"/>
+<rect x="528" y="30" width="168" height="180" rx="4" fill="url(#dpanel)" stroke="#6a3810" stroke-width="1.5"/>
+<!-- Panel shadow/depth -->
+<rect x="352" y="34" width="160" height="172" rx="3" fill="none" stroke="#8a4818" stroke-width="0.8" opacity="0.5"/>
+<rect x="532" y="34" width="160" height="172" rx="3" fill="none" stroke="#8a4818" stroke-width="0.8" opacity="0.5"/>
+
+<!-- Lower door panels (2 side-by-side) -->
+<rect x="348" y="230" width="168" height="200" rx="4" fill="url(#dpanel)" stroke="#6a3810" stroke-width="1.5"/>
+<rect x="528" y="230" width="168" height="200" rx="4" fill="url(#dpanel)" stroke="#6a3810" stroke-width="1.5"/>
+<rect x="352" y="234" width="160" height="192" rx="3" fill="none" stroke="#8a4818" stroke-width="0.8" opacity="0.5"/>
+<rect x="532" y="234" width="160" height="192" rx="3" fill="none" stroke="#8a4818" stroke-width="0.8" opacity="0.5"/>
+
+<!-- Door knocker / handle area -->
+<g transform="translate(525, 240)">
+  <!-- Backplate -->
+  <rect x="-12" y="-28" width="24" height="56" rx="5" fill="#a07020"/>
+  <rect x="-10" y="-26" width="20" height="52" rx="4" fill="#c89030"/>
+  <!-- Handle bar -->
+  <rect x="-8" y="-8" width="16" height="28" rx="8" fill="#8a6015"/>
+  <rect x="-6" y="-6" width="12" height="24" rx="7" fill="#b07820"/>
+  <!-- Keyhole -->
+  <circle cx="0" cy="12" r="5" fill="#5a3808"/>
+  <rect x="-3" y="12" width="6" height="8" fill="#5a3808"/>
+</g>
+
+<!-- Floor / doorstep -->
+<rect x="0" y="440" width="1200" height="60" fill="#1a0d05"/>
+<!-- Step edge -->
+<rect x="280" y="438" width="490" height="8" rx="2" fill="#3a2010"/>
+<rect x="280" y="438" width="490" height="3" fill="#5a3820" opacity="0.6"/>
+
+<!-- === WOVEN BASKET === -->
+<g transform="translate(640, 310)">
+  <!-- Basket shadow on floor -->
+  <ellipse cx="0" cy="185" rx="145" ry="28" fill="#0a0503" opacity="0.7" filter="url(#soft)"/>
+
+  <!-- Basket body main -->
+  <path d="M -130 100 Q -135 180 -120 195 Q -60 210 0 212 Q 60 210 120 195 Q 135 180 130 100 Z" fill="#8a5818"/>
+  <!-- Basket weave bands -->
+  <g fill="none" stroke="#c89040" stroke-width="2" opacity="0.6">
+    <path d="M -130 100 Q 0 118 130 100"/>
+    <path d="M -132 118 Q 0 136 132 118"/>
+    <path d="M -133 136 Q 0 154 133 136"/>
+    <path d="M -133 154 Q 0 170 133 154"/>
+    <path d="M -132 170 Q 0 184 132 170"/>
+    <path d="M -130 185 Q 0 197 130 185"/>
+  </g>
+  <!-- Vertical weave strands -->
+  <g stroke="#a07028" stroke-width="1.5" opacity="0.5" fill="none">
+    <path d="M -120 98 Q -118 145 -115 192"/>
+    <path d="M -90 102 Q -88 150 -86 200"/>
+    <path d="M -60 104 Q -58 152 -56 204"/>
+    <path d="M -30 105 Q -28 153 -26 206"/>
+    <path d="M 0 106 Q 0 154 0 208"/>
+    <path d="M 30 105 Q 28 153 26 206"/>
+    <path d="M 60 104 Q 58 152 56 204"/>
+    <path d="M 90 102 Q 88 150 86 200"/>
+    <path d="M 120 98 Q 118 145 115 192"/>
+  </g>
+  <!-- Basket base shade -->
+  <path d="M -120 195 Q -60 210 0 212 Q 60 210 120 195 Q 60 205 0 207 Q -60 205 -120 195 Z" fill="#5a3010" opacity="0.5"/>
+
+  <!-- Basket rim -->
+  <path d="M -132 98 Q 0 115 132 98 Q 0 88 -132 98 Z" fill="#c89030"/>
+  <path d="M -132 98 Q 0 108 132 98" stroke="#e0a840" stroke-width="2" fill="none"/>
+  <path d="M -132 98 Q 0 90 132 98" stroke="#b07820" stroke-width="1.5" fill="none"/>
+
+  <!-- === PRODUCE INSIDE BASKET === -->
+
+  <!-- Tomato cluster left -->
+  <g filter="url(#glow)">
+    <circle cx="-75" cy="62" r="34" fill="#b81810"/>
+    <circle cx="-75" cy="62" r="32" fill="#d02020"/>
+    <ellipse cx="-85" cy="50" rx="12" ry="8" fill="#e84040" opacity="0.35"/>
+    <!-- Stem + leaves -->
+    <rect x="-78" y="26" width="6" height="12" rx="3" fill="#2a7a18"/>
+    <path d="M -75 28 Q -92 15 -88 30 Q -80 26 -75 28 Z" fill="#3a8a22"/>
+    <path d="M -75 28 Q -58 15 -62 30 Q -70 26 -75 28 Z" fill="#2a7a18"/>
+    <path d="M -75 28 Q -75 10 -73 20 Q -72 28 -75 28 Z" fill="#3a8a22"/>
+  </g>
+  <!-- Second tomato behind -->
+  <circle cx="-42" cy="75" r="26" fill="#c01818"/>
+  <circle cx="-42" cy="75" r="24" fill="#d82222"/>
+  <rect x="-45" y="48" width="5" height="10" rx="2" fill="#2a7a18"/>
+
+  <!-- Fresh greens / coriander spilling out left -->
+  <g fill="#2a8a18" opacity="0.85">
+    <path d="M -130 95 Q -160 60 -145 40 Q -130 55 -130 95 Z"/>
+    <path d="M -130 95 Q -170 75 -162 50 Q -148 68 -130 95 Z"/>
+    <path d="M -130 95 Q -155 85 -148 65 Q -138 78 -130 95 Z"/>
+    <path d="M -115 90 Q -140 50 -120 30 Q -108 55 -115 90 Z"/>
+    <path d="M -115 90 Q -145 70 -135 48 Q -120 65 -115 90 Z"/>
+  </g>
+  <g stroke="#3aaa28" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M -130 95 Q -155 70 -148 45"/>
+    <path d="M -115 90 Q -140 60 -130 32"/>
+  </g>
+
+  <!-- Onion — center -->
+  <g transform="translate(10, 72)">
+    <ellipse cx="0" cy="0" rx="30" ry="35" fill="#c0801a"/>
+    <ellipse cx="0" cy="0" rx="28" ry="33" fill="#d89528"/>
+    <!-- Onion layers hint -->
+    <path d="M -28 0 Q -26 -20 0 -33 Q 26 -20 28 0" stroke="#e8b040" stroke-width="0.8" fill="none" opacity="0.5"/>
+    <path d="M -26 5 Q -24 -14 0 -26 Q 24 -14 26 5" stroke="#e8b040" stroke-width="0.8" fill="none" opacity="0.4"/>
+    <!-- Dried root end -->
+    <ellipse cx="0" cy="34" rx="8" ry="5" fill="#9a6010"/>
+    <!-- Dried top wisps -->
+    <g stroke="#a07015" stroke-width="1" fill="none" opacity="0.7">
+      <path d="M -4 -33 Q -8 -50 -6 -58"/><path d="M 0 -33 Q 0 -52 2 -60"/><path d="M 4 -33 Q 8 -50 6 -58"/>
+    </g>
+    <ellipse cx="-10" cy="-10" rx="10" ry="7" fill="#f0c848" opacity="0.3"/>
+  </g>
+
+  <!-- Green chilli peppers — diagonal top right -->
+  <g transform="translate(55, 45) rotate(-20)">
+    <path d="M -5 -60 Q -6 0 -3 30 Q 0 35 3 30 Q 6 0 5 -60 Q 2 -65 -5 -60 Z" fill="#1a8a08"/>
+    <path d="M -4 -58 Q -5 0 -2 28 Q 2 25 4 -58 Z" fill="#28aa10"/>
+    <rect x="-2" y="-68" width="4" height="10" rx="2" fill="#5a9030"/>
+    <!-- Curved tip -->
+    <path d="M 3 30 Q 8 42 5 48 Q 0 42 3 30 Z" fill="#1a8a08"/>
+  </g>
+  <g transform="translate(75, 38) rotate(-35)">
+    <path d="M -5 -55 Q -6 0 -3 28 Q 0 32 3 28 Q 6 0 5 -55 Q 2 -60 -5 -55 Z" fill="#228a10"/>
+    <path d="M 3 28 Q 8 38 5 44 Q 0 38 3 28 Z" fill="#1a7808"/>
+    <rect x="-2" y="-63" width="4" height="10" rx="2" fill="#5a9030"/>
+  </g>
+
+  <!-- Lime / lemon bright yellow-green -->
+  <g filter="url(#glow)">
+    <circle cx="68" cy="70" r="26" fill="#8aaa10"/>
+    <circle cx="68" cy="70" r="24" fill="#aac820"/>
+    <ellipse cx="60" cy="62" rx="10" ry="7" fill="#c8e840" opacity="0.4"/>
+    <!-- Nubbed top -->
+    <circle cx="68" cy="46" r="5" fill="#6a9a08"/>
+  </g>
+
+  <!-- Curry leaves spilling right -->
+  <g fill="#1a7a10" opacity="0.8">
+    <path d="M 130 95 Q 162 55 148 35 Q 133 52 130 95 Z"/>
+    <path d="M 130 95 Q 168 72 160 48 Q 146 66 130 95 Z"/>
+    <path d="M 115 90 Q 148 52 132 30 Q 118 56 115 90 Z"/>
+    <path d="M 130 95 Q 155 82 148 60 Q 138 76 130 95 Z"/>
+  </g>
+  <g stroke="#28aa18" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M 130 95 Q 158 65 148 38"/><path d="M 115 90 Q 145 62 133 32"/>
+  </g>
+
+  <!-- Carrot tops peeking out back -->
+  <g transform="translate(-20, 88) rotate(15)">
+    <path d="M -4 -70 Q -6 -30 -3 0 Q 0 6 3 0 Q 6 -30 4 -70 Q 1 -76 -4 -70 Z" fill="#e07808"/>
+    <path d="M -3 -68 Q -5 -28 0 4 Q 5 -28 3 -68 Z" fill="#f09020"/>
+    <g stroke="#3a8a18" stroke-width="1.5" fill="none">
+      <path d="M 0 -68 Q -12 -90 -8 -105"/><path d="M 0 -68 Q 5 -92 2 -108"/>
+      <path d="M 0 -68 Q -20 -85 -16 -100"/>
+    </g>
+  </g>
+
+  <!-- Basket handle -->
+  <path d="M -100 98 Q -110 20 0 10 Q 110 20 100 98" stroke="#a07025" stroke-width="10" fill="none"/>
+  <path d="M -100 98 Q -110 20 0 10 Q 110 20 100 98" stroke="#c89035" stroke-width="7" fill="none"/>
+  <path d="M -100 98 Q -110 20 0 10 Q 110 20 100 98" stroke="#e0a840" stroke-width="4" fill="none" opacity="0.5"/>
+</g>
+
+<!-- WhatsApp phone glow — subtle, far left on wall -->
+<g transform="translate(140, 230)" opacity="0.5">
+  <!-- Phone body -->
+  <rect x="-28" y="-55" width="56" height="110" rx="8" fill="#1a1a1a"/>
+  <rect x="-26" y="-53" width="52" height="106" rx="7" fill="#252525"/>
+  <!-- Screen glow (WhatsApp green) -->
+  <rect x="-23" y="-50" width="46" height="94" rx="5" fill="#075E54"/>
+  <!-- WA chat bubbles on screen -->
+  <rect x="-18" y="-40" width="30" height="14" rx="6" fill="#25D366" opacity="0.9"/>
+  <rect x="-12" y="-22" width="28" height="14" rx="6" fill="#dcf8c6" opacity="0.8"/>
+  <rect x="-18" y="-4" width="32" height="14" rx="6" fill="#25D366" opacity="0.9"/>
+  <rect x="-10" y="14" width="24" height="14" rx="6" fill="#dcf8c6" opacity="0.8"/>
+  <!-- Small WA icon -->
+  <circle cx="0" cy="36" r="10" fill="#25D366"/>
+  <path d="M 0 28 Q 7 28 7 34 Q 7 38 3 39 Q 5 43 7 45 Q 4 44 1 40 Q -7 40 -7 34 Q -7 28 0 28 Z" fill="white" opacity="0.9"/>
+  <!-- Screen reflection -->
+  <path d="M -22 -50 L 5 -50 L -22 -20 Z" fill="white" opacity="0.04"/>
+  <!-- Light glow from screen -->
+  <ellipse cx="0" cy="0" rx="55" ry="75" fill="#25D366" opacity="0.06" filter="url(#soft)"/>
+</g>
+
+<!-- "Raasa Harvest" delivery tag/label on basket handle area -->
+<g transform="translate(640, 195)">
+  <rect x="-65" y="-15" width="130" height="30" rx="4" fill="#8a5010" opacity="0.85"/>
+  <rect x="-63" y="-13" width="126" height="26" rx="3" fill="#c89030" opacity="0.7"/>
+  <text font-family="Georgia, serif" font-size="11" fill="#fff8e0" text-anchor="middle" y="4" opacity="0.9">Raasa Harvest</text>
+  <!-- Tag hole and string -->
+  <circle cx="-60" cy="0" r="4" fill="#7a4010"/>
+  <line x1="-64" y1="0" x2="-80" y2="-15" stroke="#a07020" stroke-width="1.2" opacity="0.7"/>
+</g>
+
+<!-- Warm ground glow under basket -->
+<ellipse cx="640" cy="460" rx="180" ry="30" fill="#e8980a" opacity="0.08" filter="url(#soft)"/>
+
+<!-- Dim light far right wall - house number plate look -->
+<g transform="translate(1050, 200)" opacity="0.45">
+  <rect x="-35" y="-22" width="70" height="44" rx="4" fill="#3a2205"/>
+  <rect x="-32" y="-19" width="64" height="38" rx="3" fill="#c89030"/>
+  <text font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#3a1a02" text-anchor="middle" y="8">42</text>
+</g>
+
+<!-- Small potted plant right of door -->
+<g transform="translate(970, 380)">
+  <!-- Pot -->
+  <path d="M -25 50 Q -28 100 28 100 Q 28 50 25 50 Z" fill="#8a4810"/>
+  <path d="M -25 50 L 25 50 Q 28 54 28 60 Q 0 65 -28 60 Q -28 54 -25 50 Z" fill="#a05818"/>
+  <rect x="-22" y="96" width="44" height="8" rx="3" fill="#7a3808"/>
+  <!-- Soil top -->
+  <ellipse cx="0" cy="52" rx="24" ry="7" fill="#3a2008"/>
+  <!-- Plant leaves -->
+  <g fill="#1a6a10">
+    <path d="M 0 50 Q -30 20 -25 0 Q -8 25 0 50 Z"/>
+    <path d="M 0 50 Q 30 20 25 0 Q 8 25 0 50 Z"/>
+    <path d="M 0 50 Q -15 15 -5 -10 Q 2 20 0 50 Z"/>
+    <path d="M 0 50 Q 15 15 5 -10 Q -2 20 0 50 Z"/>
+    <path d="M 0 50 Q -40 30 -38 8 Q -18 30 0 50 Z"/>
+  </g>
+  <g stroke="#28a020" stroke-width="0.8" fill="none" opacity="0.6">
+    <path d="M 0 50 Q -28 22 -24 2"/><path d="M 0 50 Q 28 22 24 2"/>
+    <path d="M 0 50 Q -38 30 -36 10"/>
+  </g>
+</g>
+
+<!-- Doorstep mat -->
+<path d="M 310 460 Q 370 455 520 458 Q 620 462 750 458 Q 680 470 520 472 Q 370 470 310 460 Z" fill="#3a2810" opacity="0.7"/>
+<path d="M 330 460 Q 440 456 520 459 Q 600 462 720 458 Q 640 468 520 470 Q 400 468 330 460 Z" fill="#5a4020" opacity="0.5"/>
+</svg>
