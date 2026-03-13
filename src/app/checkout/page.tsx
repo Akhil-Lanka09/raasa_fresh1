@@ -13,7 +13,7 @@ export default function CheckoutPage() {
   const { user } = useAuth();
   const router = useRouter();
   const [placing, setPlacing] = useState(false);
-  const [address, setAddress] = useState(profile?.address ?? '');
+  const [address, setAddress] = useState(user?.address1 ?? '');
 
   async function placeOrder(e: React.FormEvent) {
     e.preventDefault();
