@@ -9,7 +9,7 @@ import { useAuth } from '@/context/AuthContext';
 import styles from './checkout.module.css';
 
 export default function CheckoutPage() {
-  const { items, totalPrice, clear } = useCart();
+  const { cart: items, totalPrice, clearCart: clear } = useCart();
   const { user, profile } = useAuth();
   const router = useRouter();
   const [placing, setPlacing] = useState(false);
